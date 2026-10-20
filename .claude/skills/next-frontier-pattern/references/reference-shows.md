@@ -1,6 +1,6 @@
 # Reference shows — what each teaches Next Frontier
 
-Researched 2026-10-20. Full notes (Thai): `NextFrontier/note.md`.
+Researched 2026-10-20. Full notes (Thai): [research-notes.md](research-notes.md).
 
 | Show | Format | Lesson for Next Frontier | Source |
 |---|---|---|---|

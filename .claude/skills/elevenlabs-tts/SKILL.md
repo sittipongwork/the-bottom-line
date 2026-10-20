@@ -14,7 +14,7 @@ Converts Thai scripts (host/MC, interviewer, guests) into natural-sounding busin
 
 | Format | When | Layout | Template |
 |---|---|---|---|
-| **Plain transcript** (default) | User checks/prepares a transcript, will paste it into the ElevenLabs app (Studio / Text to Speech), or doesn't mention the API | Thai paragraphs with inline `[tags]`, a blank line between paragraphs. **No** front matter, speaker labels, `#` headings or comments, like `NextFrontier/ep1_tolan/transcript_v4.md` | [templates/plain-template.md](templates/plain-template.md) |
+| **Plain transcript** (default) | User checks/prepares a transcript, will paste it into the ElevenLabs app (Studio / Text to Speech), or doesn't mention the API | Thai paragraphs with inline `[tags]`, a blank line between paragraphs. **No** front matter, speaker labels, `#` headings or comments (full-length example: [../next-frontier-pattern/references/example-episode.md](../next-frontier-pattern/references/example-episode.md), below its header) | [templates/plain-template.md](templates/plain-template.md) |
 | **API script** | User explicitly wants audio generated via `tts.py generate` / the API, or needs several voices in one dialogue | Front matter + one `SPEAKER: [tag] Thai text` turn per line | [templates/script-template.md](templates/script-template.md) |
 
 If the source file is already in plain format, keep the plain format. All Thai-formatting and tagging rules (steps 2–3) apply to both.
@@ -37,11 +37,11 @@ All commands below run from the project root; `TTS=.claude/skills/elevenlabs-tts
 
 | Key | Role | Source | Notes |
 |---|---|---|---|
-| `mc1` | HOST / MC | Voice Design | 25-year-old Thai, clear, professional, medium pitch, fast-to-moderate news-podcast pacing, tech & business narrator. Full prompt in [voices.json](voices.json). |
+| `mc1` | HOST / MC | Voice Design | **Female**, 25-year-old Thai, clear, professional, medium pitch, fast-to-moderate news-podcast pacing, tech & business narrator. Full prompt in [voices.json](voices.json). |
 
 - **MC1 is the default voice for the `HOST` speaker** in every script unless the user says otherwise: `HOST: "@mc1"`.
 - MC1's style is crisp narrator — favor `[professional]`, `[confident]`, `[warm]`, `[curious]`, `[short pause]`; keep big emotional tags (`[laughs]`, `[excited]`, `[playful]`) rare.
-- The MC1 prompt does not specify gender. After the voice is created, listen to it and use the matching Thai ending particle (`ครับ` or `ค่ะ/คะ`) consistently in all HOST lines. If unknown, ask the user.
+- **MC1 is female** (decided 2026-10-20). In every HOST line use `ค่ะ` for statements and `คะ` for questions and after `นะ` / `ล่ะ` (`นะคะ`, `ล่ะคะ`, `ไหมคะ?`). Never `ครับ`. For self-reference prefer `เรา`; use `ดิฉัน` only when a first-person singular is unavoidable. Guests use the particle matching their own voice.
 - Never guess voice IDs. For other speakers (guests), ask the user for a voice ID, or add a new Voice Design entry to `voices.json`.
 
 ### Creating a Voice Design voice (one-time per voice)
@@ -78,7 +78,7 @@ Follow [references/thai-formatting.md](references/thai-formatting.md). Key rules
 
 ### 3. Add audio tags that match the content
 Follow [references/audio-tags.md](references/audio-tags.md). Key rules:
-- **Tags are always English**, the spoken text is always Thai: `HOST: [warm] สวัสดีครับทุกท่าน`
+- **Tags are always English**, the spoken text is always Thai: `HOST: [warm] สวัสดีค่ะทุกท่าน`
 - Put a tone tag at the **start** of a turn; only short reactions (`[chuckles]`, `[short pause]`) go mid-sentence.
 - Max 2 tags stacked; ~1 tag per 1–3 sentences. Business talk must sound credible, not theatrical.
 - Change the tag when the emotion of the content changes (failure story → `[reflective]`, results → `[confident]`).

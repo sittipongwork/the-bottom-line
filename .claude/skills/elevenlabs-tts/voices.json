@@ -4,17 +4,29 @@
     "role": "HOST / MC (business talk, interview, news-podcast narration)",
     "source": "voice_design",
     "design_model": "eleven_ttv_v3",
-    "description": "A 25-year-old Thai young adult with a clear, professional, and articulate speaking voice. Medium-pitch, smooth tone, confident, natural resonance. Fast-to-moderate news-podcast pacing, clear enunciation, modern tech and business narrator vibe, studio recording quality, no background noise.",
+    "description": "A 25-year-old Thai young woman with a clear, professional, and articulate speaking voice. Medium-pitch, smooth tone, confident, natural resonance. Fast-to-moderate news-podcast pacing, clear enunciation, modern tech and business narrator vibe, studio recording quality, no background noise.",
     "preview_text": "สวัสดีทุกท่าน ยินดีต้อนรับเข้าสู่รายการที่จะพาคุณไปเจาะลึกโลกธุรกิจและเทคโนโลยี วันนี้เราจะคุยกันเรื่องที่หลายคนกำลังสงสัย ว่าสตาร์ทอัพไทยจะเติบโตได้อย่างไร ในยุคที่ AI เข้ามาเปลี่ยนแปลงทุกอุตสาหกรรม แล้วผู้นำองค์กรต้องปรับตัวแบบไหน เพื่อไม่ให้ถูกทิ้งไว้ข้างหลัง พร้อมแล้ว ไปฟังคำตอบจากแขกรับเชิญของเรากันเลย",
     "settings": {
       "stability": 0.5,
       "similarity": 0.75,
       "speed": 1.05
     },
-    "primary_tags": ["professional", "confident", "warm", "curious", "short pause"],
-    "avoid_tags": ["laughs", "excited", "playful", "sarcastic"],
+    "primary_tags": [
+      "professional",
+      "confident",
+      "warm",
+      "curious",
+      "short pause"
+    ],
+    "avoid_tags": [
+      "laughs",
+      "excited",
+      "playful",
+      "sarcastic"
+    ],
     "voice_id": null,
     "generated_voice_id": null,
-    "created_at": null
+    "created_at": null,
+    "gender": "female"
   }
 }
