@@ -63,7 +63,7 @@ Options: `--seed N` (reproducible previews), `--guidance-scale` (default 5; lowe
 ## Workflow
 
 ### 1. Gather content and assign speakers
-- Source material: raw scripts, transcripts, or bullet points (e.g. `MC/`, `NextFrontier/`).
+- Source material: raw scripts, transcripts, or bullet points (e.g. `MC/`, `NextFrontier/`, `BizShorts/`). For show-specific structure use the `next-frontier-pattern` or `bizshorts-pattern` skill.
 - **Plain transcript:** skip speaker labels and voice mapping; one paragraph = one beat/topic (≤ ~600 characters), starting with a tone tag. Tone tags may change mid-paragraph when the emotion changes.
 - **API script only:** speaker labels are uppercase ASCII without spaces: `HOST`, `GUEST`, `COHOST`, `NARRATOR`.
 - Map voices in front matter: `HOST: "@mc1"`, others → registry key or raw voice ID. Leave `<VOICE_ID>` placeholders if unknown and tell the user.

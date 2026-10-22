@@ -1,6 +1,6 @@
 ---
 name: next-frontier-pattern
-description: Content pattern for "Next Frontier" — the THE BOTTOM LINE channel's solo-MC (MC1) Thai show that breaks down how AI startups win, for business people interested in AI startups. Use when researching, outlining, writing, rewriting or reviewing a Next Frontier episode script/transcript (files under NextFrontier/), choosing an episode's hook, logline or structure, or when the user says a script is confusing/boring/unclear. Pair with the elevenlabs-tts skill for TTS formatting and tags.
+description: Content pattern for "Next Frontier" — the THE BOTTOM LINE channel's solo-MC (MC1) Thai show that breaks down how AI startups win, for business people interested in AI startups. Use when researching, outlining, writing, rewriting or reviewing a Next Frontier episode script/transcript (files under NextFrontier/), choosing an episode's hook, logline or structure, or when the user says a script is confusing/boring/unclear. Pair with the elevenlabs-tts skill for TTS formatting and tags. Not for BizShorts Shorts (use bizshorts-pattern).
 ---
 
 # Next Frontier — Episode Pattern (THE BOTTOM LINE)
@@ -107,4 +107,5 @@ Avoid: an unnamed "บริษัทหนึ่ง…" opening that reveals th
 - [ ] Remaining proper names are essential
 - [ ] Lesson aimed at founders/investors + metaphor; CTA continues the content
 - [ ] ~4,000–5,000 chars; `tts.py check` passes with 0 errors / 0 warnings
+- [ ] Female particles only (`ค่ะ` / `คะ`), no `ครับ` / `ผม`
 - [ ] Unverified facts listed for the user
